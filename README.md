@@ -1,6 +1,6 @@
 # Hardware-Design-Notes
 Record BEC design experience
-# P768 高压配电盒 (PDU) 集成设计笔记  <-- 一级标题（项目名）
+#高压配电盒 (PDU) 集成设计笔记  <-- 一级标题（项目名）
 
 ## 1. 项目概述  <-- 二级标题
 本项目负责 **800V 平台** 的高压电流分配与保护。核心目标是实现 *ASIL-C* 级的功能安全。

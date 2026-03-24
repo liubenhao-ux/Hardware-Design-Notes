@@ -17,3 +17,10 @@ Record BEC design experience
 | 额定电流 | 250A | 300A | 选 B |
 | 极限分断 | 2000A | 2500A | B 更优 |
 | 成本 (RMB) | ¥450 | ¥580 | A 更有优势 |
+
+### 预充回路计算
+预充电阻 $R$ 的选取需满足预充时间 $t < 200ms$：
+
+$$t = -R \cdot C \cdot \ln(1 - \frac{V_{pre}}{V_{bat}})$$
+
+其中 $C$ 为后端支撑电容，$V_{pre}$ 为预充目标电压。

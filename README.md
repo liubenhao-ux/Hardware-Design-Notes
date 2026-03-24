@@ -23,7 +23,7 @@ Record BEC design experience
 
 $$t = -R \cdot C \cdot \ln(1 - \frac{V_{pre}}{V_{bat}})$$
 
-其中 $C$ 为后端支撑电容，${V_{pre}$ 为预充目标电压。
+其中 $C$ 为后端支撑电容，$V_{pre}$ 为预充目标电压。
 
 ```mermaid
 graph LR
@@ -32,4 +32,15 @@ graph LR
     Check -- Yes --> MainPos[主正接触器闭合]
     MainPos --> DisPre[断开预充接触器]
     Check -- No --> Error[报预充超时故障]
+```
+
+
+# 简单的铜排温升估算脚本
+```python
+def calc_temp_rise(current, resistance, surface_area):
+    power = (current ** 2) * resistance
+    temp_rise = power / (surface_area * 0.0012) # 简化系数
+    return temp_rise
+
+print(f"预计温升: {calc_temp_rise(300, 0.0001, 5000)} K")
 ```

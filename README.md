@@ -23,7 +23,7 @@ Record BEC design experience
 
 $$t = -R \cdot C \cdot \ln(1 - \frac{V_{pre}}{V_{bat}})$$
 
-其中 $C$ 为后端支撑电容，$V_{pre}$ 为预充目标电压。
+其中 $C$ 为后端支撑电容，${V_{pre}$ 为预充目标电压。
 
 ```mermaid
 graph LR

@@ -24,3 +24,10 @@ Record BEC design experience
 $$t = -R \cdot C \cdot \ln(1 - \frac{V_{pre}}{V_{bat}})$$
 
 其中 $C$ 为后端支撑电容，$V_{pre}$ 为预充目标电压。
+
+graph LR
+    Start(开始上电) --> Precharge[预充接触器闭合]
+    Precharge --> Check{电压 > 95%?}
+    Check -- Yes --> MainPos[主正接触器闭合]
+    MainPos --> DisPre[断开预充接触器]
+    Check -- No --> Error[报预充超时故障]
